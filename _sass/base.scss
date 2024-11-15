@@ -1,0 +1,54 @@
+//$backgroundColor: #ffffff;
+//$bodyColor: #000000;
+//$bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+@import "settings/variables";
+
+// =======================
+// Tools and libs
+// =======================
+@import "tools/normalize";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  //font-family: $heading-font-family;
+  //font-weight: $heading-font-weight;
+  //line-height: $heading-line-height;
+  //letter-spacing: $heading-letter-spacing;
+  font-family: var(--headerFont);
+  color: var(--headerColor);
+}
+
+@import "modules/typography";
+@import "modules/buttons";
+
+@import "settings/utilities";
+
+@import "modules/navbar";
+@import "modules/hero";
+@import "modules/features";
+@import "modules/offer";
+@import "modules/portfolio";
+@import "modules/audit";
+@import "modules/pricing";
+@import "modules/blog";
+@import "modules/cta";
+@import "modules/footer";
+

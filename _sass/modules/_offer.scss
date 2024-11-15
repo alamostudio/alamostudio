@@ -1,0 +1,90 @@
+#pricing {
+  padding: var(--sectionPadding);
+
+  .container {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+
+  .image-group {
+    height: 30rem;
+    width: 100%;
+    overflow: hidden;
+    border-radius: clamp(1rem, 10vw, 6.25rem);
+  }
+
+  .background {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    .topper {
+      font-family: var(--topperFontFamily);
+      font-size: var(--topperFontSize);
+      font-weight: 700;
+      line-height: 1.2em;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      text-align: left;
+      color: var(--primary);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .title {
+      margin: 0 0 calc(16 / 16 * 1rem) 0;
+      font-family: var(--sectionHeaderFontFamily);
+      font-size: var(--sectionHeaderFontSize);
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    .text {
+      margin: 0 0 1.5rem
+    }
+  }
+
+  .card-group {
+    width: 100%;
+    display: grid;
+    margin: 0 0 2rem;
+    padding: 0;
+    gap: clamp(1rem, 4vw, 2.5rem);
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+
+      .wrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 0.65rem;
+      }
+
+      .item-title {
+        font-family: var(--sectionHeaderFontFamily);
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0;
+        letter-spacing: -0.0125rem;
+      }
+
+      .item-text {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}

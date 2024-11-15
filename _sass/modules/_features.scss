@@ -1,0 +1,190 @@
+/*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-1378 {
+    padding: var(--sectionPadding);
+
+    .cs-container {
+      width: 100%;
+      max-width: calc(1280 / 16 * 1rem);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+
+    .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+    }
+
+    .cs-content {
+      margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    }
+
+    .cs-title {
+      font-weight: 900;
+      line-height: 1.2em;
+      text-align: inherit;
+      max-width: 43.75rem;
+      margin: 0 0 1rem 0;
+      color: var(--sectionHeaderColor);
+      position: relative;
+    }
+
+    .cs-card-group {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      /* 16px - 20px */
+      column-gap: clamp(1rem, 2vw, 1.25rem);
+      /* 72px - 84px */
+      row-gap: clamp(4.5rem, 6vw, 5.25rem);
+    }
+
+    .cs-item {
+      /* change to left if you want text aligned to the left */
+      text-align: center;
+      list-style: none;
+      width: 100%;
+      /* 210px - 305px */
+      min-height: clamp(13.125rem, 30vw, 19.0625rem);
+      margin: 0;
+      /* prevents padding and border from affecting height and width */
+      box-sizing: border-box;
+      /* 16px - 40px */
+      padding: clamp(1rem, 3vw, 2.5rem);
+      padding-top: 0;
+      background-color: #f4f4f4;
+      border-radius: calc(24 / 16 * 1rem);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      grid-column: span 12;
+      position: relative;
+      z-index: 1;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: var(--primary);
+
+        .cs-picture {
+          background-color: var(--primary);
+        }
+
+        .cs-icon,
+        .cs-arrow {
+          filter: grayscale(1) brightness(1000%);
+        }
+
+        .cs-h3,
+        .cs-item-text {
+          color: #fff;
+        }
+
+        .cs-item-text {
+          opacity: 0.8;
+        }
+
+        .cs-link {
+          border-color: #fff;
+        }
+      }
+    }
+
+    .cs-picture {
+      width: calc(88 / 16 * 1rem);
+      height: calc(88 / 16 * 1rem);
+      margin: calc(-44 / 16 * 1rem) 0 clamp(1.75rem, 3vw, 2.25rem) 0;
+      box-sizing: border-box;
+      background-color: #bababa;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s background-color;
+    }
+
+    .cs-icon {
+      width: calc(32 / 16 * 1rem);
+      height: auto;
+      transition: filter 0.3s;
+    }
+
+    .cs-h3 {
+      /* 20px - 25px */
+      font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+      font-weight: bold;
+      line-height: 1.2em;
+      text-align: inherit;
+      text-align: inherit;
+      /* if a word is too long for the card, break it onto a new line */
+      word-break: break-word;
+      margin: 0 0 calc(12 / 16 * 1rem);
+      transition: color 0.3s;
+    }
+
+    .cs-item-text {
+      font-size: calc(16 / 16 * 1rem);
+      line-height: 1.5em;
+      text-align: inherit;
+      margin: 0 0 calc(32 / 16 * 1rem);
+      color: var(--bodyTextColor);
+      transition: 0.3s color;
+    }
+
+    .cs-link {
+      text-decoration: none;
+      width: calc(64 / 16 * 1rem);
+      height: calc(64 / 16 * 1rem);
+      color: var(--headerColor);
+      border: 1px solid #bababa;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* prevents the parent flexbox from shrinking the arrow */
+      flex-shrink: 0;
+      gap: calc(10 / 16 * 1rem);
+      transition: border-color 0.3s;
+    }
+
+    .cs-arrow {
+      width: auto;
+      height: calc(12 / 16 * 1rem);
+      transition: filter 0.3s;
+    }
+  }
+}
+
+/* Tablet - 600px */
+@media only screen and (min-width: 37.5rem) {
+  #services-1378 {
+    .cs-item {
+      grid-column: span 6;
+    }
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #services-1378 {
+    .cs-item {
+      grid-column: span 4;
+    }
+  }
+}
+

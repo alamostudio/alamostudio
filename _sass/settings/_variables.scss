@@ -1,0 +1,38 @@
+// *****************
+// Global Variables
+// *****************
+
+:root {
+  --primary: #001f3f;
+  --secondary: #43b7ff;
+  --tertiary: #bdbd22;
+
+  --textColorWhite: #fff;
+
+  --heroHeaderFontFamily: "Barlow Condensed", sans-serif;
+  --heroHeaderFontSize: clamp(2.4375rem, 6.4vw, 3.8125rem);
+  --heroHeaderColor: #1a1a1a;
+
+  --heroTopperFontFamily: "Barlow Condensed", sans-serif;
+  --heroTopperColor: #1a1a1a;
+  --heroTopperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  --topperFontFamily: "Barlow Condensed", sans-serif;
+  --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+  --topperColor: #1a1a1a;
+
+  --sectionHeaderFontFamily: "Barlow Condensed", sans-serif;
+  --sectionHeaderFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+  --sectionHeaderFontWeight: 900;
+  --sectionHeaderLineHeight: 1.2;
+  --sectionHeaderColor: #1a1a1a;
+
+  --bodyTextColor: #4e4b66;
+  --bodyTextColorWhite: #fafbfc;
+  --bodyFont: ;
+  --bodyFontSize: 1rem;
+
+  --buttonFont: "Barlow Condensed", sans-serif;
+
+  // spacing
+  --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
