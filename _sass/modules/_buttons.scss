@@ -1,7 +1,7 @@
 .cs-button-solid {
   font-family: var(--buttonFont);
   font-size: calc(16 / 16 * 1rem);
-  line-height: calc(56 / 16 * 1rem);
+  line-height: clamp(2.875rem, 5.5vw, 3.5rem);
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
