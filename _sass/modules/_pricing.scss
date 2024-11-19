@@ -5,7 +5,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #pricing-1260 {
-    padding: var(--sectionPadding);
+    padding: var(--section-padding);
     /* clips svg graphic from overflowing the section */
     overflow: hidden;
     position: relative;
@@ -20,7 +20,7 @@
       flex-direction: column;
       align-items: center;
       /* 48px - 64px, changes to 20px at large desktop */
-      gap: clamp(3rem, 6vw, 4rem);
+      gap: clamp(2rem, 4vw, 4rem);;
       position: relative;
     }
 
@@ -36,6 +36,13 @@
       align-items: flex-start;
     }
 
+    .headline {
+      max-width: 26ch;
+      text-transform: uppercase;
+      text-align: left;
+      margin: 0 0 1rem 0;
+    }
+
     .cs-text {
       margin-bottom: calc(16/16 * 1rem);
       &:last-of-type {
@@ -44,43 +51,7 @@
     }
 
     .cs-button-solid {
-      font-size: calc(16/16 * 1rem);
-      /* 46px - 56px */
-      line-height: clamp(2.875em, 5.5vw, 3.5em);
-      text-decoration: none;
-      font-weight: 700;
       text-align: center;
-      margin: 0;
-      color: #fff;
-      min-width: calc(150/16 * 1rem);
-      padding: 0 calc(24/16 * 1rem);
-      background-color: var(--primary);
-      overflow: hidden;
-      border-radius: calc(4/16 * 1rem);
-      display: inline-block;
-      position: relative;
-      z-index: 1;
-      /* prevents padding from adding to the width */
-      box-sizing: border-box;
-
-      &:before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 0%;
-        background: #000;
-        opacity: 1;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: width 0.3s;
-      }
-
-      &:hover {
-        &:before {
-          width: 100%;
-        }
-      }
     }
 
     .cs-card-group {
@@ -112,7 +83,7 @@
       z-index: 1;
 
       &.cs-popular {
-        background-color: #14142b;
+        background-color: var(--black);
         border-radius: 0 0 calc(24/16 * 1rem) 0;
         border: none;
 
@@ -140,7 +111,7 @@
 
         .cs-button-transparent {
           background-color: var(--primary);
-          color: var(--bodyTextColorWhite);
+          color: var(--text-white);
           border: none;
           transition: color 0.3s;
 

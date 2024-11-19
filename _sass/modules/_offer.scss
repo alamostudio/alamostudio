@@ -1,5 +1,5 @@
 #offer {
-  padding: var(--sectionPadding);
+  padding: var(--section-padding);
 
   .container {
     width: auto;
@@ -32,25 +32,15 @@
     width: 100%;
 
     .topper {
-      font-family: var(--topperFontFamily);
-      font-size: var(--topperFontSize);
-      font-weight: 700;
-      line-height: 1.2em;
-      letter-spacing: .1em;
-      text-transform: uppercase;
       text-align: left;
-      color: var(--primary);
       display: block;
-      margin-bottom: 0.25rem;
     }
 
-    .title {
-      margin: 0 0 calc(16 / 16 * 1rem) 0;
+    .headline {
       max-width: 26ch;
-      font-family: var(--sectionHeaderFontFamily);
-      font-size: var(--sectionHeaderFontSize);
       text-transform: uppercase;
       text-align: left;
+      margin: 0 0 1rem 0;
     }
 
     .text {
@@ -79,11 +69,6 @@
       }
 
       .item-title {
-        font-family: var(--sectionHeaderFontFamily);
-        font-weight: 700;
-        text-transform: uppercase;
-        margin: 0;
-        letter-spacing: -0.0125rem;
       }
 
       .item-text {

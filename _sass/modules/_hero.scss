@@ -6,8 +6,12 @@
 @media only screen and (min-width: 0rem) {
   #hero-1352 {
     /* 250px - 500px - leaving extra space for the navigation */
-    padding: clamp(15.625rem, 35.95vw, 25rem) calc(16 / 16 * 1rem) 0;
-    padding-bottom: 0;
+    //padding: clamp(15.625rem, 35.95vw, 25rem) calc(16 / 16 * 1rem) 0;
+    padding-top: clamp(10.625rem, 21.95vw, 15rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: clamp(3.25rem, 6.5vw, 6.625rem);
+    //padding-bottom: 0;
     box-sizing: border-box;
     overflow: hidden;
     position: relative;
@@ -56,6 +60,9 @@
       /* 48px - 64px */
       gap: clamp(3rem, 6vw, 4rem);
       position: relative;
+      background-color: var(--blue);
+      padding: clamp(2rem, 10vw, 7rem) clamp(1rem, 4vw, 3rem);
+      border-radius: 1rem;
     }
 
     .cs-content {
@@ -67,42 +74,30 @@
       flex-direction: column;
       /* centers content horizontally, set to flex-start to left align */
       align-items: center;
+      color: var(--white);
     }
 
-    .cs-topper {
-      font-size: calc(20 / 16 * 1rem);
-      line-height: 1.2em;
-      text-transform: uppercase;
-      text-align: inherit;
-      letter-spacing: 0.1em;
-      color: var(--heroTopperColor);
-      margin-bottom: calc(8 / 16 * 1rem);
-      display: block;
-      font-family: var(--heroTopperFontFamily);
-    }
-
-    .cs-title {
-      /* 39px - 61px */
-      font-family: var(--heroHeaderFontFamily);
-      font-size: var(--heroHeaderFontSize);
-      font-weight: 700;
-      line-height: 1.2em;
-      text-align: inherit;
-      max-width: 20ch;
-      margin: 0 0 calc(16 / 16 * 1rem) 0;
+    .headline {
       position: relative;
-      color: var(--heroHeaderColor)
+      max-width: 20ch;
+      text-align: inherit;
+      margin: 0 0 calc(16 / 16 * 1rem) 0;
+      color: inherit;
+    }
+
+    .topper {
+      color: inherit;
     }
 
     .cs-text {
-      font-size: calc(20 / 16 * 1rem);
-      line-height: 1.5em;
+      font-size: 1.3rem;
+      line-height: 160%;
       text-align: inherit;
       width: 100%;
       /* 464px - 622px */
       max-width: clamp(29rem, 60vw, 38.785rem);
       margin: 0 0 calc(40 / 16 * 1rem) 0;
-      color: var(--bodyTextColor);
+      color: inherit;
     }
 
     .cs-picture {
@@ -252,7 +247,7 @@
 @media only screen and (min-width: 48rem) {
   #hero-1352 {
     /* 180px - 250px */
-    padding-bottom: clamp(11.25rem, 16.5vw, 15.625rem);
+    padding-bottom: clamp(4.25rem, 8.5vw, 7.625rem);
 
     .cs-container {
       flex-direction: row;
@@ -263,13 +258,15 @@
       text-align: left;
       width: 53%;
       align-items: flex-start;
+      flex: 1;
     }
 
     .cs-picture {
       width: 100%;
-      position: absolute;
-      bottom: calc(-400 / 16 * 1rem);
-      right: calc(-160 / 16 * 1rem);
+      flex: 1;
+      //position: absolute;
+      //bottom: calc(-400 / 16 * 1rem);
+      //right: calc(-160 / 16 * 1rem);
     }
 
     //.cs-bubbles {
@@ -287,7 +284,7 @@
 @media only screen and (min-width: 48rem) {
   #hero-1352 {
     .cs-picture {
-      bottom: calc(-230 / 16 * 1rem);
+      //bottom: calc(-230 / 16 * 1rem);
     }
   }
 }
@@ -296,14 +293,14 @@
 @media only screen and (min-width: 81.25rem) {
   #hero-1352 {
     .cs-container {
-      position: initial;
+      //position: initial;
     }
 
     .cs-picture {
-      margin-left: calc(70 / 16 * 1rem);
-      left: 50%;
-      right: auto;
-      bottom: -1px;
+      //margin-left: calc(70 / 16 * 1rem);
+      //left: 50%;
+      //right: auto;
+      //bottom: -1px;
     }
 
     //.cs-bubbles1 {

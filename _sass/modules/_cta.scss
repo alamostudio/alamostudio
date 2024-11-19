@@ -5,7 +5,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #cta-51 {
-    padding: var(--sectionPadding);
+    padding: var(--section-padding);
     position: relative;
 
     .cs-container {
@@ -30,55 +30,20 @@
     }
 
     .cs-title {
-      color: var(--bodyTextColorWhite);
+      color: var(--text-white);
+      margin: 0 0 1rem 0;
+    }
+
+    .cs-topper {
+      color: var(--lightgray-bg)
     }
 
     .cs-text {
       margin-bottom: calc(16 / 16 * 1rem);
-      color: var(--bodyTextColorWhite);
+      color: var(--text-body);
       opacity: 0.8;
       &:last-of-type {
         margin-bottom: calc(32 / 16 * 1rem);
-      }
-    }
-
-    .cs-button-solid {
-      font-size: calc(16 / 16 * 1rem);
-      /* 46px - 56px */
-      line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-      text-decoration: none;
-      font-weight: 700;
-      text-align: center;
-      margin: 0;
-      color: #fff;
-      min-width: calc(150 / 16 * 1rem);
-      padding: 0 calc(24 / 16 * 1rem);
-      background-color: var(--primary);
-      border-radius: calc(4 / 16 * 1rem);
-      display: inline-block;
-      position: relative;
-      z-index: 1;
-      /* prevents padding from adding to the width */
-      box-sizing: border-box;
-
-      &:before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 0%;
-        background: #000;
-        opacity: 1;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        border-radius: calc(4 / 16 * 1rem);
-        transition: width 0.3s;
-      }
-
-      &:hover {
-        &:before {
-          width: 100%;
-        }
       }
     }
 
@@ -113,6 +78,16 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+      }
+    }
+
+    .cs-button-solid {
+      &::before {
+        background: #FDA02C;
+      }
+
+      &:hover {
+        color: var(--text-black);
       }
     }
   }

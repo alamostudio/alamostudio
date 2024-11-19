@@ -3,6 +3,14 @@
 <--- -------------------------- -*/
 
 /* Mobile - 1023px */
+@media only screen and (min-width: 0rem) {
+  #cs-navigation {
+    .button-solid-secondary {
+      font-size: 1.33rem;
+    }
+  }
+}
+
 @media only screen and (max-width: 63.9375rem) {
   body {
     &.cs-open {
@@ -90,8 +98,8 @@
 
     .cs-logo {
       width: auto;
-      max-width: calc(200 / 16 * 1rem);
-      height: 100%;
+      max-width: 2.5rem;
+      height: 3.3rem;
       margin: 0 auto 0 0;
       /* prevents padding from affecting height and width */
       box-sizing: border-box;
@@ -301,7 +309,7 @@
 
     .cs-li-link {
       /* 16px - 24px */
-      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      font-size: clamp(1.150rem, 2vw, 1.5rem);
       line-height: 1.2em;
       text-decoration: none;
       margin: 0;
@@ -328,7 +336,7 @@
 @media only screen and (min-width: 48rem) {
   #cs-navigation {
     .cs-contact-group {
-      display: block;
+      display: flex;
     }
   }
 }
@@ -389,7 +397,7 @@
     .cs-logo {
       width: 18.4%;
       max-width: calc(350 / 16 * 1rem);
-      height: calc(32 / 16 * 1rem);
+      height: 3.3rem;
       /* margin-right auto pushes everything away from it to the right */
       margin: 0 auto 0 0;
       padding: 0;

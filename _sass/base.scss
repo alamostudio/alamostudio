@@ -9,7 +9,9 @@
 // =======================
 @import "tools/normalize";
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -22,24 +24,9 @@ ul {
   list-style: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  //font-family: $heading-font-family;
-  //font-weight: $heading-font-weight;
-  //line-height: $heading-line-height;
-  //letter-spacing: $heading-letter-spacing;
-  font-family: var(--headerFont);
-  color: var(--headerColor);
-}
-
-@import "modules/typography";
-@import "modules/buttons";
-
+@import "settings/typography";
 @import "settings/utilities";
+@import "modules/buttons";
 
 @import "modules/navbar";
 @import "modules/hero";
@@ -51,4 +38,3 @@ h6 {
 @import "modules/blog";
 @import "modules/cta";
 @import "modules/footer";
-
