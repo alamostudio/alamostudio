@@ -5,57 +5,23 @@
 <section id="services-1378">
   <div class="cs-container">
     <div class="cs-content">
-      <span class="topper">Our Services</span>
-      <h2 class="headline">We’re Commited to Deliver Top High Quality Services</h2>
-      <p class="cs-text">We specialize in small business web design and development for clients anywhere in the US. Every line of code is written by hand to ensure the best performance, which helps bring in more customers to your site and bring more revenue to your business.</p>
+      <span class="topper">{{ site.data.settings.service_settings.topper }}</span>
+      <h2 class="headline">{{ site.data.settings.service_settings.headline }}</h2>
+      <p class="cs-text">{{ site.data.settings.service_settings.subheadline }}</p>
     </div>
     <ul class="cs-card-group">
-      <li class="cs-item">
-        <picture class="cs-picture">
-          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-layers.svg" alt="icon" width="48" height="48">
-        </picture>
-        <h3 class="cs-h3">Full Development</h3>
-        <p class="cs-item-text">Blanket term for a whole gamut of different holistic, non-medical, physical procedures aimed at helping you achieve</p>
-      </li>
-      <li class="cs-item">
-        <picture class="cs-picture">
-          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-media.svg" alt="icon" width="48" height="48">
-        </picture>
-        <h3 class="cs-h3">Media Strategy</h3>
-        <p class="cs-item-text">Blanket term for a whole gamut of different holistic, non-medical, physical procedures aimed at helping you achieve</p>
-      </li>
-      <li class="cs-item">
-        <picture class="cs-picture">
-          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-alert.svg" alt="icon" width="48" height="48">
-        </picture>
-        <h3 class="cs-h3">Effective Marketing</h3>
-        <p class="cs-item-text">Blanket term for a whole gamut of different holistic, non-medical, physical procedures aimed at helping you achieve</p>
-      </li>
-      <li class="cs-item">
-        <picture class="cs-picture">
-          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-meter.svg" alt="icon" width="48" height="48">
-        </picture>
-        <h3 class="cs-h3">SEO Optimization</h3>
-        <p class="cs-item-text">Blanket term for a whole gamut of different holistic, non-medical, physical procedures aimed at helping you achieve</p>
-      </li>
-      <li class="cs-item">
-        <picture class="cs-picture">
-          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-design.svg" alt="icon" width="48" height="48">
-        </picture>
-        <h3 class="cs-h3">UX / UI Design</h3>
-        <p class="cs-item-text">Blanket term for a whole gamut of different holistic, non-medical, physical procedures aimed at helping you achieve</p>
-      </li>
-      <li class="cs-item">
-        <picture class="cs-picture">
-          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-image.svg" alt="icon" width="48" height="48">
-        </picture>
-        <h3 class="cs-h3">Photo and Print</h3>
-        <p class="cs-item-text">Blanket term for a whole gamut of different holistic, non-medical, physical procedures aimed at helping you achieve</p>
-      </li>
+      {% for card in site.data.settings.service_settings.services %}
+        <li class="cs-item">
+          <picture class="cs-picture">
+            <img class="cs-icon" src="{{ card.icon }}" loading="lazy" decoding="async" alt="icon" width="48" height="48">
+          </picture>
+          <h3 class="cs-h3">{{ card.title }}</h3>
+          <p class="cs-item-text">{{ card.content }}</p>
+        </li>
+      {% endfor %}
     </ul>
-
     <a class="cs-button-solid">
-      Call us today
+      {{ site.data.settings.service_settings.button_text }}
     </a>
   </div>
 </section>

@@ -1,27 +1,41 @@
 <section id="audit">
   <div class="container">
-    <div class="content">
-      <span class="topper">performance</span>
-      <h2 class="headline">we build <span class="highlight">better</span> websites that perform</h2>
-      <p class="text">When it comes to website load times, not very many can get the Google PageSpeed scores that we get with each and every site. Test your website load times with Google PageSpeed Insights and see what your current site is scoring right now.</p>
-
-      <ul class="list-group">
-        <li class="item">
-          <img src="https://oakharborwebdesigns.com/assets/svgs/stat1.svg" width="40" height="40" alt="icon" loading="lazy" class="icon">
-          <p class="item-text">Better load times means more traffic and more site conversions over time.</p>
-        </li>
-        <li class="item">
-          <img src="https://oakharborwebdesigns.com/assets/svgs/stat2.svg" width="40" height="40" alt="icon" loading="lazy" class="icon">
-          <p class="item-text">Faster websites can help improve SEO and your Google ads performance.</p>
-        </li>
-        <li class="item">
-          <img src="https://oakharborwebdesigns.com/assets/svgs/stat3.svg" width="40" height="40" alt="icon" loading="lazy" class="icon">
-          <p class="item-text">Our sites load instantly in under 1 second or less, which leads to a better user experience and conversions.</p>
-        </li>
-      </ul>
-      <a href="#" class="button-solid-secondary">claim free seo audit</a>
+    <div class="heading-wrapper">
+      <span class="topper">{{ site.data.settings.audit_settings.topper }}</span>
+      <h2 class="headline">{{ site.data.settings.audit_settings.headline }}</h2>
+      <p class="text">{{ site.data.settings.audit_settings.subheadline }}</p>
     </div>
 
+    <div class="content">
+      <ul class="list-group">
+        {% for category in site.data.settings.audit_settings.audit_categories %}
+        <li class="item">
+          <img src="{{ category.icon }}" width="40" height="40" alt="icon" loading="lazy" class="icon">
+          <div class="item-content">
+            <h6>{{ category.title }}</h6>
+            <p class="item-text">{{ category.content }}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
 
+      <form class="form">
+        {% for field in site.data.settings.audit_settings.form.fields %}
+          <div class="field">
+            <label class="label">
+              {{ field.label }}
+            </label>
+            <input class="input" required type="{{ field.type }}" name="{{ field.name }}" placeholder="{{ field.placeholder }}">
+          </div>
+        {% endfor %}
+        <div class="checkbox-field">
+          <input class="checkbox" checked type="checkbox" name="newsletter">
+          <label class="label">
+            I want to receive SEO tips and updates.
+          </label>
+        </div>
+        <button class="button-solid-secondary" type="submit">{{ site.data.settings.audit_settings.button_text }}</button>
+      </form>
+    </div>
   </div>
 </section>

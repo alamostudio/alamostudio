@@ -86,6 +86,7 @@
         background-color: var(--black);
         border-radius: 0 0 calc(24/16 * 1rem) 0;
         border: none;
+        color: var(--text-white);
 
         .cs-popular-tag {
           display: inline-flex;
@@ -96,7 +97,7 @@
         .cs-duration,
         .cs-item-text,
         .cs-li {
-          color: var(--bodyTextColorWhite);
+          color: inherit;
         }
 
         .cs-item-text,
@@ -262,8 +263,6 @@
     .cs-icon {
       width: calc(24/16 * 1rem);
       height: auto;
-      filter: grayscale(1);
-      opacity: 0.5;
       display: block;
     }
 

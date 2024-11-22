@@ -5,74 +5,41 @@
 <section id="pricing-1260">
   <div class="cs-container">
     <div class="cs-content">
-      <span class="cs-topper">Pricing</span>
-      <h2 class="headline">Simple Pricing Packages</h2>
+      <span class="cs-topper">{{ site.data.settings.pricing_settings.topper }}</span>
+      <h2 class="headline">{{ site.data.settings.pricing_settings.headline }}</h2>
       <p class="cs-text">
-        We believe in transparency when it comes to pricing for your construction project. We offer three different packages to meet your specific needs and budget,
+        {{ site.data.settings.pricing_settings.subheadline }}
       </p>
     </div>
     <ul class="cs-card-group">
-      <li class="cs-item">
-        <span class="cs-popular-tag">Recommended</span>
-        <picture class="cs-picture">
-          <img class="cs-picture-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/walking.svg" alt="checkmark" width="44" height="44">
-        </picture>
-        <span class="cs-package">One Time</span>
-        <span class="cs-price">
-                    $3000
-                    <span class="cs-duration">/month</span>
-                </span>
-        <p class="cs-item-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida, ex in commodo euismod, justo nisi bibendum libero,
-        </p>
-        <ul class="cs-ul">
-          <li class="cs-li">
-            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/round-check.svg" alt="checkmark" width="18" height="18">
-            Praesent feugiat sem mattis.
-          </li>
-          <li class="cs-li">
-            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/round-check.svg" alt="checkmark" width="18" height="18">
-            Praesent feugiat sem mattis.
-          </li>
-          <li class="cs-li">
-            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/round-check.svg" alt="checkmark" width="18" height="18">
-            Praesent feugiat sem mattis.
-          </li>
-        </ul>
-        <a href="" class="cs-button-solid">Book Call</a>
-      </li>
-      <li class="cs-item cs-popular">
-        <span class="cs-popular-tag">Recommended</span>
-        <picture class="cs-picture">
-          <img class="cs-picture-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/badge.svg" alt="checkmark" width="44" height="44">
-        </picture>
-        <span class="cs-package">Ongoing</span>
-        <span class="cs-price">
-                    $169
-                    <span class="cs-duration">/month</span>
-                </span>
-        <p class="cs-item-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida, ex in commodo euismod, justo nisi bibendum libero,
-        </p>
-        <ul class="cs-ul">
-          <li class="cs-li">
-            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/round-check.svg" alt="checkmark" width="18" height="18">
-            Praesent feugiat sem mattis.
-          </li>
-          <li class="cs-li">
-            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/round-check.svg" alt="checkmark" width="18" height="18">
-            Praesent feugiat sem mattis.
-          </li>
-          <li class="cs-li">
-            <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/round-check.svg" alt="checkmark" width="18" height="18">
-            Praesent feugiat sem mattis.
-          </li>
-        </ul>
-        <a href="" class="cs-button-solid">Book Call</a>
-      </li>
+      {% for card in site.data.settings.pricing_settings.pricing_cards %}
+        <li class="cs-item {% if card.popular == 'true' %}cs-popular{% endif %}">
+          <span class="cs-popular-tag">Recommended</span>
+          <picture class="cs-picture">
+            <img class="cs-picture-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/walking.svg" alt="checkmark" width="44" height="44">
+          </picture>
+          <span class="cs-package">{{ card.title }}</span>
+          <span class="cs-price">
+            {{ card.price }}
+            <span class="cs-duration">{{ card.duration }}</span>
+          </span>
+          <p class="cs-item-text">
+            {{ card.content }}
+          </p>
+          <ul class="cs-ul">
+            {% for feature in card.features %}
+              <li class="cs-li">
+                <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="{{ feature.icon | relative_url }}" alt="icon" width="18" height="18">
+                {{ feature.title }}
+              </li>
+            {% endfor %}
+          </ul>
+          <a href="/contact" class="cs-button-solid">Get Started</a>
+        </li>
+      {% endfor %}
     </ul>
     <picture class="cs-waves-wrapper">
-      <img class="cs-waves" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/svg-waves.svg" alt="waves" width="743" height="708">
+      <img class="cs-waves" aria-hidden="true" loading="lazy" decoding="async" src="{{ '/assets/images/waves.svg' | relative_url }}" alt="waves" width="743" height="708">
     </picture>
   </div>
 </section>

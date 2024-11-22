@@ -1,0 +1,197 @@
+title: ""
+description: ""
+
+#-------------------------------
+# NAVIGATION
+navigation_settings:
+  button_text: "book call"
+
+  social_links:
+    - title: "Twitter"
+      url: "https://twitter.com/"
+      icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-1a.svg"
+    - title: "Instagram"
+      url: "https://www.instagram.com/"
+      icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram1a.svg"
+    - title: "Youtube"
+      url: "https://www.youtube.com/"
+      icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/youtube1a.svg"
+
+  navigation_links:
+    - title: "Home"
+      url: "/"
+    - title: "About"
+      url: "/about"
+    - title: "Services"
+      url: "/services"
+    - title: "Blog"
+      url: "/blog"
+    - title: "Contact"
+      url: "/contact"
+
+#-------------------------------
+# HERO
+hero_settings:
+  topper: "creative studio"
+  headline: "Small Business Web Design In San Antonio"
+  subheadline: "We make beautiful, mobile-friendly and SEO optimized websites faster than any Wordpress or page builder hosting service."
+  button_text: "Free consultation"
+  hero_image: "/assets/images/seo.svg"
+
+#-------------------------------
+# SERVICES
+service_settings:
+  topper: "Our services"
+  headline: "We Help You Exponentially Increase Your Brand's Value."
+#  headline: "We Help You Grow Online, Even If You Don't Deserve It."
+  subheadline: "At Alamo Studio, we bring over 20 years of combined experience to help small business owners craft outstanding websites that reflect their unique identity. We hand-code every website, and guarantee they are mobile-friendly, fully responsive, and optimized with top-tier on-page SEO. Our websites not only make search engines happy but also captivate customers—driving more traffic, leads, and ultimately, sales."
+  button_text: "Call us today"
+  services:
+    - title: "Web Design"
+      icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-image.svg"
+      content: "We craft beautiful, modern, and mobile-optimized websites that are designed to convert visitors into customers."
+    - title: "Web Development"
+      icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-layers.svg"
+      content: "Do you have an app idea for your business? We can build fast, secure, and easy to manage custom applications."
+    - title: "Shopify Development"
+      icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-alert.svg"
+      content: "We can setup your Shopify theme, customize an existing one, or create your own custom theme from scratch."
+    - title: "SEO"
+      icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-meter.svg"
+      content: "We SEO audit websites, and plan out strategies to make your website rank higher in Google search results."
+    - title: "Content & Copy"
+      icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-media.svg"
+      content: "We write content for your website, or edit your existing content to make it more engaging and SEO-friendly."
+    - title: "Automation"
+      icon: "https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/agency-design.svg"
+      content: "We can automate anything. Onboarding processes, inventory management, marketing campaigns, you name it."
+
+#-------------------------------
+# OFFER
+offer_settings:
+  topper: "did you know?"
+#  headline: "increase customer referrals and word-of-mouth"
+#  subheadline: "Satisfaction is the key driver of loyalty and word-of-mouth recommendations. The top three reasons users become dissatisfied with a website are slow loading speeds, lack of mobile responsiveness, and poor navigation. Don't let a bad website lower your brand's perceived value!"
+  headline: "Website satisfaction increases loyalty and word-of-mouth"
+  subheadline: "The top three reasons users become dissatisfied with a website are slow loading speeds, lack of mobile responsiveness, and poor navigation. Don't let a bad website lower your brand's perceived value! Here's what we can do for you:"
+  button_text: "Increase Your Brand's Value"
+  offer_image: "/assets/images/offer.svg"
+  cards:
+    - title: "100% secure"
+      content: "Our websites are built with HTML and CSS, which makes them more secure than Wordpress websites."
+    - title: "guaranteed speed"
+      content: "We guarantee a 90+ Google PageSpeed score. Websites built with HTML and CSS are <i>wayyy</i> faster than any site builder."
+    - title: "Custom design"
+      content: "We want you to have a unique design that reflects your brand. We don't use templates or themes that looks like everyone else's."
+    - title: "Mobile optimized"
+      content: "We guarantee that your website will look great on any device, no matter the screen size."
+    - title: "easy to scale"
+      content: "We can add new features and pages as you need them. Our websites are built to grow with your business without sacrificing performance."
+
+# -------------------------------
+# AUDIT
+audit_settings:
+  topper: "Free SEO Audit"
+  headline: "Is Your Business Being <span class='highlight'>Found?</span>"
+  subheadline: "We can make a free SEO audit of your business website and send you a comprehensive report detailing the good, the bad, and a list of recommendations to improve your website's ranking on Google. Some of the categories we'll check are:"
+  button_text: "Get <span style='color:var(--beige);'>free</span> SEO audit"
+  form:
+    action: "https://formspree.io/f/maylqzqz"
+    checkbox_label: "I want to receive seo tips and updates."
+    checkbox_name: "newsletter"
+    fields:
+      - type: "text"
+        name: "business_name"
+        label: "Business Name"
+        placeholder: "Business name"
+      - type: "email"
+        name: "email"
+        label: "Email"
+        placeholder: "john@doe.com"
+      - type: "url"
+        name: "website_url"
+        label: "Website URL"
+        placeholder: "yourwebsite.com"
+
+    business_name_placeholder: "Your business name"
+    business_email_label: "Business Email"
+    business_email_placeholder: "Your business email"
+    business_website_label: "Website URL"
+    business_website_placeholder: "yourwebsite.com"
+    checkbox_label: "I want to receive seo tips and updates."
+  audit_categories:
+    - title: "Website Performance"
+      content: "PageSpeed Insights, Core Web Vitals, Compression."
+      icon: "/assets/icons/hourglass.svg"
+    - title: "Mobile-Friendliness"
+      content: "Mobile-Friendly Tests, Mobile Usability, and Mobile PageSpeed."
+      icon: "/assets/icons/mobile.svg"
+    - title: "On-Page SEO"
+      content: "Meta Tags, Headings, Content, Images, Links, and Keywords."
+      icon: "/assets/icons/magnifying.svg"
+    - title: "Local SEO"
+      content: "Google My Business, Local Citations, and Reviews."
+      icon: "/assets/icons/shop.svg"
+    - title: "Technical SEO"
+      content: "Robots.txt, Sitemap, and Structured Data."
+      icon: "/assets/icons/wrench.svg"
+    - title: "Security"
+      content: "SSL Certificate, HTTPS, and Malware."
+      icon: "/assets/icons/shield.svg"
+
+#-------------------------------
+# PRICING
+pricing_settings:
+  topper: "How much?"
+  headline: "Our Pricing"
+  subheadline: "We offer $0 down for a standard 5 page small business website. 12 month minimum contract for the Ongoing plan. If you need more than that then we have to do custom pricing based on the scope of work, number of additional pages, and time involved. <a href='/contact' style='color: var(--primary)'>Contact us</a> if you have any questions."
+  check_icon: "/assets/icons/check.svg"
+  pricing_cards:
+    - title: "One Time"
+      popular: "false"
+      price: "$2,800"
+      duration: ""
+      content: "Perfect for small businesses that need a simple website with a few pages."
+      features:
+        - title: "Design & Development"
+          icon: "/assets/icons/check.svg"
+        - title: "+$100 fee per page after 5"
+          icon: "/assets/icons/check.svg"
+        - title: "+$25/mo hosting"
+          icon: "/assets/icons/check.svg"
+        - title: "+$50/mo unlimited edits (Add-on)"
+          icon: "/assets/icons/check.svg"
+        - title: "+$250/mo to add a blog (Add-on)"
+          icon: "/assets/icons/check.svg"
+        - title: "24/7 support"
+          icon: "/assets/icons/ban.svg"
+        - title: "Lifetime updates"
+          icon: "/assets/icons/ban.svg"
+    - title: "Ongoing"
+      popular: "true"
+      price: "$300"
+      duration: "/month"
+      content: "Great for businesses that need a more complex website with more features."
+      features:
+        - title: "Design & Development"
+          icon: "/assets/icons/check.svg"
+        - title: "Includes hosting"
+          icon: "/assets/icons/check.svg"
+        - title: "$100 fee per page after 5"
+          icon: "/assets/icons/check.svg"
+        - title: "+$250 to add a blog (Add-on)"
+          icon: "/assets/icons/check.svg"
+        - title: "Unlimited edits"
+          icon: "/assets/icons/check.svg"
+        - title: "24/7 support"
+          icon: "/assets/icons/check.svg"
+        - title: "Lifetime updates"
+          icon: "/assets/icons/check.svg"
+
+#-------------------------------
+# ABOUT
+about_settings:
+  headline: ""
+  subheadline: ""
+  about_image: ""
+  content: ""

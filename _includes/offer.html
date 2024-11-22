@@ -1,50 +1,38 @@
-<section id="offer">
-  <div class="container">
-    <div class="image-group">
-      <picture class="background">
-        <source media="(max-width: 600px)" srcset="{{ 'assets/images/me-closeup.webp' | relative_url }}">
-        <img alt="Andres Urdaneta, Owner and Development at 'The Alamo Studio'" src="{{ 'assets/images/me-closeup.webp' | relative_url }}" loading="lazy" decoding="async">
-      </picture>
-    </div>
-    <div class="content">
-      <span class="topper">What we offer</span>
-      <h2 class="headline">
-        websites starting at $0 down and $150 per month
-      </h2>
-      <p class="text">
-        We offer a variety of services to help you get your business online. From website design to hosting, we have you covered. Our websites are built with the latest technologies and are fully responsive. We also offer SEO services to help you get found on Google.
-      </p>
-      <ul class="card-group">
-        <li class="item">
-          <div class="wrapper">
-            <img alt="check" decoding="async" src="https://www.svgrepo.com/show/356736/checkmark.svg" height="24" width="24" loading="lazy">
-            <h3 class="item-title">100% Secure</h3>
-          </div>
-          <p class="item-text">
-            Our sites are just static HTML and CSS code, meaning there’s literally nothing that can be hacked.
-          </p>
-        </li>
-        <li class="item">
-          <div class="wrapper">
-            <img alt="check" decoding="async" src="https://www.svgrepo.com/show/356736/checkmark.svg" height="24" width="24" loading="lazy">
-            <h3 class="item-title">Custom Designed</h3>
-          </div>
-          <p class="item-text">
-            Our designs are made by an in-house design team, which allows us to make anything we want.
-          </p>
-        </li>
-        <li class="item">
-          <div class="wrapper">
-            <img alt="check" decoding="async" src="https://www.svgrepo.com/show/356736/checkmark.svg" height="24" width="24" loading="lazy">
-            <h3 class="item-title">100 PageSpeed Scores</h3>
-          </div>
-          <p class="item-text">
-            Our sites have zero bloat, zero waste, and built with purpose so we get perfect 98-100/100 speed scores with Google.
-          </p>
-        </li>
-      </ul>
+<section>
+  <div class="image-group">
+    <picture class="background">
+      <source media="(max-width: 600px)" srcset="{{ 'assets/images/offer.svg' | relative_url }}">
+      <img id="offer-banner" alt="Andres Urdaneta, Owner and Development at 'The Alamo Studio'" src="{{ 'assets/images/offer.svg' | relative_url }}" loading="lazy" decoding="async">
+    </picture>
+  </div>
 
-      <a href="#" class="cs-button-solid">Free consultation</a>
+  <div id="offer">
+    <div class="container">
+
+      <div class="content">
+        <span class="topper">{{ site.data.settings.offer_settings.topper }}</span>
+        <h2 class="headline">
+          {{ site.data.settings.offer_settings.headline }}
+        </h2>
+        <p class="text">
+          {{ site.data.settings.offer_settings.subheadline }}
+        </p>
+        <ul class="card-group">
+          {% for card in site.data.settings.offer_settings.cards %}
+            <li class="item">
+              <div class="wrapper">
+                <img alt="check" decoding="async" src="https://www.svgrepo.com/show/356736/checkmark.svg" height="24" width="24" loading="lazy">
+                <h4 class="item-title">{{ card.title }}</h4>
+              </div>
+              <p class="item-text">
+                {{ card.content }}
+              </p>
+            </li>
+          {% endfor %}
+        </ul>
+
+        <a href="#" class="cs-button-solid">{{ site.data.settings.offer_settings.button_text }}</a>
+      </div>
     </div>
   </div>
 </section>

@@ -5,19 +5,19 @@
 <section id="hero-1352">
   <div class="cs-container">
     <div class="cs-content">
-      <span class="topper">grow online</span>
-      <h1 class="headline">Small Business Web Design In San Antonio</h1>
+      <span class="topper">
+        {{ site.data.settings.hero_settings.topper }}
+      </span>
+      <h1 class="headline">{{ site.data.settings.hero_settings.headline }}</h1>
       <p class="cs-text">
-        Beautiful mobile-friendly websites that are faster than any Wordpress host (looking at you too, Webflow.)
-<!--        No page builders or WordPress - We offer superior 100% hand-coded websites with starting at $150/mo.-->
+        {{ site.data.settings.hero_settings.subheadline }}
       </p>
-      <a href="" class="button-solid-secondary">Free Consultation</a>
+      <a href="" class="button-solid-secondary">{{ site.data.settings.hero_settings.button_text }}</a>
     </div>
-    <!--To make your own background crops of people use https://www.remove.bg/-->
     <picture class="cs-picture">
 <!--      <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/designer.png">-->
 <!--      <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/designer.png">-->
-      <img aria-hidden="true" decoding="async" src="{{ '/assets/images/seo.svg' | relative_url }}" alt="accountant" width="468" height="658">
+      <img aria-hidden="true" decoding="async" src="{{ site.data.settings.hero_settings.hero_image | relative_url }}" alt="accountant" width="468" height="658">
 
     </picture>
 
