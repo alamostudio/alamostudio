@@ -194,3 +194,8 @@ blog_settings:
   topper: "Our blog"
   headline: "Latest news and articles"
   subheadline: "We are always writing so we're always learning, and viceversa. We document our experiments and findings, talk about web design, development, SEO, and a lot more. Check out our latest articles below."
+
+# -------------------------------
+# FOOTER
+footer_settings:
+  copyright: "© 2024 The Alamo Studio. All rights reserved."
