@@ -42,7 +42,7 @@ hero_settings:
 # SERVICES
 service_settings:
   topper: "Our services"
-  headline: "We Help You Exponentially Increase Your Brand's Value."
+  headline: "We Help You Exponentially Increase Your Brand's Value"
 #  headline: "We Help You Grow Online, Even If You Don't Deserve It."
   subheadline: "At Alamo Studio, we bring over 20 years of combined experience to help small business owners craft outstanding websites that reflect their unique identity. We hand-code every website, and guarantee they are mobile-friendly, fully responsive, and optimized with top-tier on-page SEO. Our websites not only make search engines happy but also captivate customers—driving more traffic, leads, and ultimately, sales."
   button_text: "Call us today"
@@ -189,9 +189,8 @@ pricing_settings:
           icon: "/assets/icons/check.svg"
 
 #-------------------------------
-# ABOUT
-about_settings:
-  headline: ""
-  subheadline: ""
-  about_image: ""
-  content: ""
+# BLOG
+blog_settings:
+  topper: "Our blog"
+  headline: "Latest news and articles"
+  subheadline: "We are always writing so we're always learning, and viceversa. We document our experiments and findings, talk about web design, development, SEO, and a lot more. Check out our latest articles below."
