@@ -6,3 +6,7 @@ collections:
   posts:
     output: true
     permalink: /blog/:slug
+
+sass:
+  sass_dir: _sass
+  style: compressed
