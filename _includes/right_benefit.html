@@ -1,0 +1,22 @@
+<section class="benefit benefit--right">
+  <div class="benefit__inner">
+    <div class="benefit__image-container">
+      <picture>
+        <source
+          media="(max-width: 768px)" 
+          srcset="{{ include.image.mobile }}"
+        >
+        <img 
+          src="{{ include.image.desktop }}" 
+          alt="{{ include.alt }}" 
+          class="benefit__image"
+          loading="lazy"
+        >
+      </picture>
+    </div>
+    <div class="benefit__content">
+      <h3 class="benefit__title">{{ include.headline }}</h3>
+      <p class="benefit__text">{{ include.description }}</p>
+    </div>
+  </div>
+</section>

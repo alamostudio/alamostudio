@@ -1,0 +1,115 @@
+:root {
+  // Primary colors
+  --color-primary: #1C3D5A;
+  --color-primary-light: #264d70;
+  --color-primary-dark: #142e44;
+  --color-primary-contrast: #F8F9FA;
+
+  // Accent colors
+  --color-accent: #F2B705;
+  --color-accent-light: #ffc61a;
+  --color-accent-dark: #d9a404;
+
+  // Neutral colors
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-background: #F8F9FA;
+  --color-gray-100: #f1f3f5;
+  --color-gray-200: #e9ecef;
+  --color-gray-300: #dee2e6;
+  --color-gray-400: #ced4da;
+  --color-gray-500: #adb5bd;
+  --color-gray-600: #868e96;
+  --color-gray-700: #495057;
+  --color-gray-800: #343a40;
+  --color-gray-900: #212529;
+
+  // Text colors
+  --color-text-primary: #2C2C2C;
+  --color-text-secondary: #4a4a4a;
+  --color-text-muted: #6e6e6e;
+  --color-text-contrast: #F8F9FA;
+  --color-heading: var(--color-primary-dark);
+
+  // Background colors
+  --color-background: #F8F9FA;
+  --color-background-alt: var(--color-gray-100);
+
+  // Typography Scale (Major Third - 1.25) with clamp
+  --font-size-base: clamp(1rem, 1vw + 0.75rem, 1.125rem);                    // 16px - 18px
+  --font-size-xs: clamp(0.64rem, 0.64vw + 0.5rem, 0.75rem);                 // 10.24px - 12px
+  --font-size-sm: clamp(0.8rem, 0.8vw + 0.65rem, 0.925rem);                 // 12.8px - 14.8px
+  --font-size-md: clamp(1rem, 1vw + 0.75rem, 1.125rem);                     // 16px - 18px
+  --font-size-lg: clamp(1.25rem, 1.25vw + 1rem, 1.5rem);                    // 20px - 24px
+  --font-size-xl: clamp(1.563rem, 1.563vw + 1.25rem, 1.875rem);             // 25px - 30px
+  --font-size-2xl: clamp(1.953rem, 1.953vw + 1.5rem, 2.344rem);             // 31.25px - 37.5px
+  --font-size-3xl: clamp(2.441rem, 2.441vw + 1.875rem, 2.93rem);            // 39.06px - 46.88px
+  --font-size-4xl: clamp(3.052rem, 3.052vw + 2.344rem, 3.662rem);           // 48.83px - 58.59px
+
+  // Heading Sizes
+  --heading-1: var(--font-size-4xl);
+  --heading-2: var(--font-size-3xl);
+  --heading-3: var(--font-size-2xl);
+  --heading-4: var(--font-size-xl);
+  --heading-5: var(--font-size-lg);
+  --heading-6: var(--font-size-md);
+
+  // Line Heights
+  --line-height-tight: 1.1;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  // System Fonts
+  --font-family-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  // Body defaults
+  --body-background: var(--color-white);
+  --body-color: var(--color-black);
+  --body-font-family: var(--font-family-system);
+
+  // Semantic colors
+  --color-success: #28a745;
+  --color-info: #17a2b8;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
+
+  // Fonts
+  --font-family-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-family-body: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  // Text utilities
+  --text-body: var(--color-text-primary);
+  --text-muted: var(--color-text-muted);
+  --text-link: var(--color-primary-dark);
+
+  // Spacing System (8pt grid)
+  --space-unit: 8px;
+  
+  // Base spacing units
+  --space-xxs: calc(var(--space-unit) * 0.5);    // 4px
+  --space-xs: var(--space-unit);                  // 8px
+  --space-sm: calc(var(--space-unit) * 2);        // 16px
+  --space-md: calc(var(--space-unit) * 3);        // 24px
+  --space-lg: calc(var(--space-unit) * 4);        // 32px
+  --space-xl: calc(var(--space-unit) * 6);        // 48px
+  --space-xxl: calc(var(--space-unit) * 8);       // 64px
+  --space-xxxl: calc(var(--space-unit) * 12);     // 96px
+
+  // Component specific spacing
+  --space-section-padding: var(--space-xxxl);     // 96px
+  --space-section-padding-mobile: var(--space-xl); // 48px
+  --space-component-gap: var(--space-lg);         // 32px
+  --space-element-gap: var(--space-md);           // 24px
+  --space-inner-padding: var(--space-sm);         // 16px
+
+  // Layout spacing
+  --space-layout-gutter: var(--space-lg);         // 32px
+  --space-layout-margin: var(--space-xl);         // 48px
+  --space-container-padding: var(--space-md);     // 24px
+
+  // New color palette
+  --dusty-blue: #4F83A5;
+
+  // Add a lighter version of the accent color
+  --color-accent-lighter: #F5E6D3;  // Much lighter version of accent color
+} 

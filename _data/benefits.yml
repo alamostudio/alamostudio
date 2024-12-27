@@ -1,0 +1,28 @@
+- position: left
+  headline: "Get your business found"
+  description: "We connect your business with people who need your service. We boost your map rankings and organic search presence on search engines and local directories. No matter how or where they search, your customers will find you."
+  alt: "Get your business found"
+  image:
+    mobile: "https://alamo-studio.b-cdn.net/benefit1-1200.webp"
+    desktop: "https://alamo-studio.b-cdn.net/benefit1-2000.webp"
+
+- position: right
+  headline: "Hook, and establish your authority"
+  description: "We hook the right customers with clear calls-to-action and persuasive copy. Your website will convert ready-to-buy leads, and capture prospect emails with compelling lead magnets that establish you as an authority in your industry."
+  image:
+    mobile: "https://alamo-studio.b-cdn.net/benefit2-1100.webp"
+    desktop: "https://alamo-studio.b-cdn.net/benefit2-2300.webp"
+
+- position: left
+  headline: "Don’t let leads slip through the cracks."
+  description: "By integrating 24/7 booking capabilities, a powerful CRM to track client interactions, and integrated payment systems for one-time and recurring payments, we guarantee that every lead is handled with care and elegance—even after hours."
+  image:
+    mobile: "https://alamo-studio.b-cdn.net/benefit3-1000.webp"
+    desktop: "https://alamo-studio.b-cdn.net/benefit3-2000.webp"
+
+- position: right
+  headline: "Love your customers"
+  description: "Your satisfied customers fuel your business growth. We water these relationships with top 24/7 customer service, subscription plans, and loyalty programs that make them happy… Which ultimately brings word-of-mouth referrals!"
+  image:
+    mobile: "https://alamo-studio.b-cdn.net/benefit4-1000.webp"
+    desktop: "https://alamo-studio.b-cdn.net/benefit4-2100.webp"

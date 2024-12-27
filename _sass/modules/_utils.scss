@@ -1,0 +1,27 @@
+// Highlight marker effect
+.highlight-marker {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  color: inherit;
+  font-family: inherit;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    left: -0.25em;
+    right: -0.25em;
+    bottom: 0.1em;
+    height: 0.7em;
+    background-color: #19FC05;
+    z-index: -1;
+    transform: skew(-12deg) rotate(-2deg);
+    opacity: 0.7;
+    transition: height 0.3s ease;
+  }
+
+  &:hover::after {
+    height: 1em;
+    opacity: 0.9;
+  }
+} 

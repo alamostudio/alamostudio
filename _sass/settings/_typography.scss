@@ -1,0 +1,95 @@
+// Base typography styles
+body {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+}
+
+// Body text variations
+p {
+  font-family: var(--font-family-body);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+// Emphasis text
+strong, 
+.text-emphasis {
+  font-weight: 500;
+}
+
+// Small text and captions
+small, 
+.text-small, 
+figcaption {
+  font-weight: 300;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+// Links
+a {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+// Secondary text
+.text-secondary {
+  color: var(--color-text-muted);
+}
+
+// Ensure paragraphs and other text elements use Roboto
+p, span, a, li, input, textarea, button {
+  font-family: var(--font-family-body);
+}
+
+// Keep headings with Montserrat
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  text-transform: uppercase;
+  color: var(--color-heading);
+  max-width: 24ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: var(--heading-1);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--heading-2);
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: var(--heading-3);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+h4, h5, h6 {
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: var(--heading-4);
+}
+
+h5 {
+  font-size: var(--heading-5);
+}
+
+h6 {
+  font-size: var(--heading-6);
+} 

@@ -1,0 +1,16 @@
+// Font declarations
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Variable-Font.woff2') format('woff2');
+  font-weight: 100 900;  // Full range of weights
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,222 @@
+.map-stats {
+  padding: var(--space-section-padding) 0;
+  background-color: var(--color-background);
+
+  &__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-container-padding);
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: var(--space-xxl);
+    color: var(--color-heading);
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 100px);
+    gap: 0;
+    max-width: 100%;
+  }
+
+  &__card {
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(0.98);
+    }
+
+    // Large cards
+    &--large {
+      grid-row: span 4;
+      grid-column: span 2;
+
+      &.map-stats__card--first {
+        background-color: var(--color-primary);
+      }
+
+      &.map-stats__card--second {
+        background-color: var(--color-accent);
+      }
+    }
+
+    // Medium card
+    &--medium {
+      grid-row: span 3;
+      grid-column: span 2;
+      background-color: var(--dusty-blue);
+    }
+
+    // Small cards
+    &--small {
+      grid-row: span 2;
+      grid-column: span 2;
+
+      &.map-stats__card--third {
+        background-color: var(--color-primary-light);
+      }
+
+      &.map-stats__card--fourth {
+        background-color: var(--color-accent-light);
+
+        .map-stats__card-title,
+        .map-stats__card-text,
+        .map-stats__card-quote {
+          color: var(--color-primary);
+          opacity: 1;
+        }
+      }
+
+      &.map-stats__card--fifth {
+        background-color: var(--dusty-blue);
+      }
+    }
+
+    // Tiny card
+    &--tiny {
+      grid-row: span 1;
+      grid-column: span 2;
+      padding: var(--space-md);
+      justify-content: flex-start;
+      align-items: flex-start;
+      background-color: var(--color-accent);
+    }
+
+    // Card content styles
+    &-title {
+      font-size: var(--font-size-3xl);
+      color: var(--color-white);
+      font-weight: 800;
+      text-align: left;
+      line-height: var(--line-height-tight);
+      font-family: var(--font-family-heading);
+      text-transform: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &-text {
+      font-size: var(--font-size-base);
+      color: var(--color-white);
+      opacity: 0.9;
+      margin-bottom: var(--space-md);
+    }
+
+    &-link {
+      font-size: var(--font-size-2xl);
+      font-weight: 800;
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      text-align: left;
+
+      &:hover {
+        color: var(--color-primary-light);
+      }
+    }
+
+    &-quote {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--font-size-lg);
+      font-style: italic;
+      color: var(--color-white);
+      opacity: 0.8;
+      text-align: center;
+      padding: 0 var(--space-xl);
+      position: relative;
+      margin-top: auto;
+      font-family: var(--font-family-heading);
+      line-height: 1.2;
+      
+      &::before,
+      &::after {
+        position: absolute;
+        font-size: calc(var(--font-size-4xl) * 1.5);
+        font-style: italic;
+        opacity: 0.15;
+        font-family: "Baskerville", "Georgia", serif;
+        font-weight: 900;
+      }
+
+      &::before {
+        content: '"';
+        top: -0.2em;
+        left: 0.2em;
+      }
+
+      &::after {
+        content: '"';
+        bottom: -0.6em;
+        right: 0.2em;
+      }
+    }
+
+    // Override text colors for light background cards
+    &--second {
+      background-color: var(--color-accent);
+
+      .map-stats__card-title,
+      .map-stats__card-text,
+      .map-stats__card-quote {
+        color: var(--color-primary);
+        opacity: 1;
+      }
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 1024px) {
+    &__grid {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+    }
+
+    &__card {
+      &--large {
+        grid-column: span 2;
+        grid-row: span 3;
+      }
+
+      &--medium {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      &--small {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &__card {
+      &--large,
+      &--medium,
+      &--small {
+        grid-column: 1;
+        grid-row: auto;
+        min-height: 200px;
+      }
+    }
+  }
+
+  &__cta {
+    margin-top: var(--space-xxl);
+    margin-bottom: var(--space-xl);
+    text-align: center;
+  }
+} 

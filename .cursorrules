@@ -1,0 +1,49 @@
+# The Alamo Studio Web Design And Local Online Marketing Agency Static Jekyll Website
+
+You are an expert in web design and development who dominates Jekyll, HTML, SCSS, and JavaScript. You are also an expert in the home service industry.
+Every time you choose to apply a rule(s), explicitly state the rule(s) in the output. You can abbreviate the rule description to a single word or phrase.
+
+## Project Context
+The Alamo Studio is a web design and online marketing agency specializing in home service businesses. This is a static website built with Jekyll and it uses HTML, SCSS for styling, and JavaScript.
+
+## Key Principles
+- Write semantic HTML to improve accessibility and SEO.
+- Use SCSS for styling and avoid inline styles.
+- Ensure responsive design using media queries and flexible layouts.
+- Prioritize performance by lazy loading images and scripts.
+- Prioritize accessibility by using ARIA roles and attributes.
+
+### HTML
+- Use semantic HTML to improve accessibility and SEO.
+- Avoid using deprecated HTML elements.
+
+### SCSS
+- Use Flexbox and Grid for layout.
+- Use variables for colors, fonts, and spacing.
+- Use the BEM naming convention for classes.
+- Use rem and em units for scalable and accessible typography.
+- Declare variables for colors, fonts, and spacing in the _variables.scss file.
+
+### Responsive Design
+- Use media queries to create responsive layouts.
+- Use desktop-first design approach and cascade breakpoints.
+- Ensure touch targets are large enough for touch devices.
+- Use responsive images with srcset and sizes attributes.
+- Enforce the use of <picture> element for images with different resolutions.
+
+### Accessibility
+- Use ARIA roles and attributes to improve accessibility.
+- Ensure sufficient color contrast for text.
+- Use focus styles to indicate focus state.
+
+### JavaScript
+- Use modern JavaScript features and avoid deprecated methods.
+- Use ES6+ syntax for JavaScript.
+
+### Jekyll
+- Use the Jekyll data files to manage content.
+- Use the Jekyll includes to manage reusable content.
+- Use the Jekyll layouts to manage the structure of the site.
+- Use the Jekyll plugins to manage the functionality of the site.
+
+Refer to MDN Web Docs for HTML, SCSS and JavaScript best practices and to the W3C guidelines for accessibility standards.

@@ -1,0 +1,110 @@
+.about-us {
+  background-color: var(--color-background);
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__content {
+    padding: var(--space-section-padding) var(--space-container-padding);
+    max-width: 500px;
+    display: grid;
+    grid-template-areas: 
+      "title"
+      "text";
+  }
+
+  &__title {
+    grid-area: title;
+    font-size: var(--heading-2);
+    color: var(--color-heading);
+    margin-bottom: var(--space-lg);
+    text-align: left;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  &__text {
+    grid-area: text;
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    
+    p {
+      margin-bottom: var(--space-md);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xl);
+  }
+
+  &__image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  &__cta {
+    text-align: center;
+    padding: 0 var(--space-container-padding);
+  }
+
+  // Responsive styles
+  @media (max-width: 768px) {
+    &__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "title"
+        "image"
+        "text";
+      gap: var(--space-xl);
+    }
+
+    &__content {
+      padding: var(--space-section-padding-mobile) var(--space-container-padding);
+      max-width: 100%;
+      display: contents; // This allows children to participate in parent grid
+    }
+
+    &__title {
+      grid-area: title;
+      text-align: center;
+      margin-bottom: 0;
+      padding: 0 var(--space-container-padding);
+    }
+
+    &__text {
+      grid-area: text;
+      padding: 0 var(--space-container-padding);
+    }
+
+    &__image-container {
+      grid-area: image;
+      padding: var(--space-lg);
+    }
+
+    &__image {
+      width: 300px;
+      height: 300px;
+    }
+
+    &__cta {
+      margin-top: var(--space-xl);
+    }
+  }
+} 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <!-- Preload fonts -->
+    <link 
+      rel="preload" 
+      href="{{ "/assets/fonts/Montserrat-Variable-Font.woff2" | relative_url }}" 
+      as="font" 
+      type="font/woff2" 
+      crossorigin="anonymous"
+    >
+    <link 
+      rel="preload" 
+      href="{{ "/assets/fonts/Roboto-Regular.woff2" | relative_url }}" 
+      as="font" 
+      type="font/woff2" 
+      crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  </head>
+  <body>
+    {% include navbar.html %}
+    
+    <main>
+      {{ content }}
+    </main>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const dropdownToggle = document.querySelector('.navbar__dropdown-toggle');
+        const dropdown = document.querySelector('.navbar__dropdown');
+
+        dropdownToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          dropdown.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('active');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
