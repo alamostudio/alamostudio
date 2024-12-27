@@ -20,6 +20,14 @@
     font-weight: 600;
     color: var(--color-text-primary);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo-image {
+    height: 60px;
+    width: auto;
+    display: block;
   }
 
   &__menu {
@@ -125,6 +133,9 @@
   @media (max-width: 768px) {
     &__menu {
       display: none; // For now, we'll hide the menu on mobile
+    }
+    &__logo-image {
+      height: 60px;
     }
   }
 } 
