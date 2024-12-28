@@ -1,6 +1,10 @@
 url: "https://thealamo.studio" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "" # the name of your site, e.g. ACME Corp.
+title: "Digital Marketing For Home Service Businesses" # the name of your site, e.g. ACME Corp.
+description: "We help home service businesses grow their online presence, generate more leads, increase revenue, and scale their business."
+author: "The Alamo Studio"
+locale: "en_US"
+logo: "https://alamo-studio.b-cdn.net/alamo-logo.svg"
 
 collections:
   posts:
@@ -13,6 +17,7 @@ sass:
 
 plugins:
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 include:
   - robots.txt
