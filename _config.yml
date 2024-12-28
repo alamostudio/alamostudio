@@ -13,3 +13,6 @@ sass:
 
 plugins:
   - jekyll-sitemap
+
+include:
+  - robots.txt
