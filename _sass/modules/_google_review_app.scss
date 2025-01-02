@@ -68,10 +68,12 @@
     display: grid;
     gap: var(--space-element-gap);
     width: 100%;
+    text-align: center;
   }
 
   &__form-group {
     width: 100%;
+    text-align: left;
     
     input {
       width: 100%;

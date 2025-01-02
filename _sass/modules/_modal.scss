@@ -1,0 +1,133 @@
+.modal {
+  font-family: var(--font-family-body);
+  
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  &__container {
+    background-color: var(--color-white);
+    padding: var(--space-lg);
+    max-width: 500px;
+    max-height: 100vh;
+    border-radius: var(--space-sm);
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-md);
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: var(--heading-4);
+    line-height: 1.25;
+    color: var(--color-heading);
+    box-sizing: border-box;
+  }
+
+  &__close {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: var(--space-xs);
+    margin: calc(var(--space-xs) * -1);
+    position: relative;
+    width: 30px;
+    height: 30px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 20px;
+      background-color: var(--color-text-secondary);
+      top: 50%;
+      left: 50%;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: var(--color-text-primary);
+    }
+  }
+
+  &__content {
+    margin-bottom: var(--space-lg);
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.is-open {
+  display: block;
+}
+
+// Animation classes
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+@keyframes mmfadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes mmfadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes mmslideIn {
+  from { transform: translateY(15%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10%); }
+} 
