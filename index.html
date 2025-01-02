@@ -31,6 +31,8 @@
       crossorigin="anonymous"
     >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- MicroModal -->
+    <script src="https://cdn.jsdelivr.net/npm/micromodal/dist/micromodal.min.js"></script>
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Digital Marketing For Home Service Businesses | We help home service businesses grow their online presence, generate more leads, increase revenue, and scale their business.</title>
 <meta name="generator" content="Jekyll v4.3.4" />
@@ -129,27 +131,29 @@
 </section>
 <section class="google-app">
   <div class="google-app__inner">
-    <h2 class="google-app__title">Unlock More <span class="highlight-marker">5-Star</span> Google Maps Reviews</h2>
-    
+    <h2 class="google-app__title">Get More <span class="highlight-marker">5-Star</span> Google Maps Reviews... Without Paying a Dime</h2>
     <div class="google-app__grid">
       <div class="google-app__mockup">
-        <img src="https://alamo-studio.b-cdn.net/thank-and-rank-600.webp" alt="Google Review App Mockup" class="google-app__image" loading="lazy" />
+        <img src="https://alamo-studio.b-cdn.net/thank-and-rank.webp" alt="Google Review App Mockup" class="google-app__image" loading="lazy" />
       </div>
 
       <div class="google-app__content">
         <div class="google-app__description">
-          
-
-
           <p>
-            You get a free Google Review App and we'll also optimize your Google Business Profile for you while we're at it.<br /><br />
-            We'll contact you within one business day to set up a quick Zoom meeting together to get the info we need for your app, and to show you how to install the app on your phone. (Works with both iPhone and Android)
-            <br /><br />
-            It's free!
+            Get a personal review collection app built specifically for your business. Plus we'll optimize your Google Business Profile while we're at it at no extra cost.<br />
+            Here's what happens when you claim your app:
+            <ul>
+              <li>We'll contact you within one business day</li>
+              <li>15-min setup call via Zoom</li>
+              <li>Start collecting 5-star reviews immediately</li> 
+            </ul>
+            <p>
+              Compatible with both iPhone and Android. No technical skills needed.
+            </p>
           </p>
         </div>
 
-        <form class="google-app__form">
+        <form class="google-app__form" id="appClaimForm">
           <div class="google-app__form-group">
             <input type="text" id="firstName" name="firstName" placeholder="First Name" required="" />
           </div>
@@ -168,6 +172,29 @@
     </div>
   </div>
 </section>
+
+<div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+  <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+    <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+      <header class="modal__header">
+        <h2 class="modal__title" id="modal-1-title">
+          YOU'RE ALL SET!
+        </h2>
+        <button class="modal__close" aria-label="Close modal" data-micromodal-close=""></button>
+      </header>
+      <main class="modal__content" id="modal-1-content">
+        <p>
+          Thanks for claiming your free review collection app.<br /><br />
+          Your review collection app is being prepared — Andres will email you <b>within one business day</b> to schedule a quick 15-min Zoom setup call.
+        </p>
+      </main>
+      <footer class="modal__footer">
+        <button class="button button--primary" data-micromodal-close="" aria-label="Close this dialog window">Got it!</button>
+      </footer>
+    </div>
+  </div>
+</div>
+
 <section class="map-stats">
   <div class="map-stats__inner">
     <h2 class="map-stats__title">Did you know these <span class="highlight-marker">surprising</span> local search facts?</h2>
@@ -404,6 +431,36 @@
             dropdown.classList.remove('active');
           }
         });
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize MicroModal
+        MicroModal.init({
+          onShow: modal => console.log('Modal shown'), 
+          onClose: modal => console.log('Modal hidden'),
+          openTrigger: 'data-micromodal-trigger',
+          closeTrigger: 'data-micromodal-close',
+          disableScroll: true,
+          disableFocus: false,
+          awaitOpenAnimation: false,
+          awaitCloseAnimation: false
+        });
+
+        // Handle form submission
+        const appClaimForm = document.getElementById('appClaimForm');
+        if (appClaimForm) {
+          appClaimForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to your server
+            // For now, we'll just show the modal
+            MicroModal.show('modal-1');
+            
+            // Optional: Clear the form
+            appClaimForm.reset();
+          });
+        }
       });
     </script>
   </body>
