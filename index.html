@@ -152,19 +152,18 @@
             </p>
           </p>
         </div>
-
-        <form class="google-app__form" id="appClaimForm">
+        <form class="google-app__form" id="appClaimForm" action="https://localhost:3000/contacts" method="POST">
           <div class="google-app__form-group">
-            <input type="text" id="firstName" name="firstName" placeholder="First Name" required="" />
-          </div>
-          <div class="google-app__form-group">
-            <input type="text" id="lastName" name="lastName" placeholder="Last Name" required="" />
+            <input type="text" id="name" name="first_name" placeholder="Your Name" required="" />
           </div>
           <div class="google-app__form-group">
             <input type="email" id="email" name="email" placeholder="Email Address" required="" />
           </div>
           <div class="google-app__form-group">
-            <input type="text" id="businessName" name="businessName" placeholder="Business Name" required="" />
+            <input type="text" id="businessName" name="business_name" placeholder="Business Name" required="" />
+          </div>
+          <div class="google-app__form-group">
+            <input type="text" id="businessLocation" name="business_city" placeholder="Business City" required="" />
           </div>
           <button type="submit" class="button button--secondary button--full">Claim Your FREE App</button>
         </form>
@@ -457,15 +456,47 @@
         // Handle form submission
         const appClaimForm = document.getElementById('appClaimForm');
         if (appClaimForm) {
-          appClaimForm.addEventListener('submit', function(e) {
+          appClaimForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Here you would typically send the form data to your server
-            // For now, we'll just show the modal
-            MicroModal.show('modal-1');
-            
-            // Optional: Clear the form
-            appClaimForm.reset();
+            const formData = new FormData(appClaimForm);
+
+            try {
+              // Determine API URL based on environment
+              const apiBaseUrl = window.location.hostname === 'localhost' 
+                ? 'http://localhost:3000'
+                : 'https://app.thealamo.studio'; // Your production API domain
+
+              const response = await fetch(`${apiBaseUrl}/contacts`, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+                },
+                mode: 'cors',
+                credentials: 'include', // Changed back to 'include' since we're using specific origins
+                body: JSON.stringify(Object.fromEntries(formData))
+              });
+
+              if (response.ok) {
+                // Get the first name from the form data
+                const firstName = formData.get('first_name');
+                
+                // Update modal title with the user's first name
+                const modalTitle = document.getElementById('modal-1-title');
+                modalTitle.textContent = `YOU'RE ALL SET, ${firstName.toUpperCase()}!`;
+                
+                MicroModal.show('modal-1');
+                appClaimForm.reset();
+              } else {
+                const errorData = await response.json();
+                alert(errorData.message || 'Something went wrong. Please try again.');
+                console.error('Error:', errorData);
+              }
+            } catch (error) {
+              alert('Something went wrong. Please try again.');
+              console.error('Error:', error);
+            }
           });
         }
       });
