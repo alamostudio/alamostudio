@@ -1,0 +1,24 @@
+.error-404 {
+  min-height: calc(100vh - 200px); // Adjust based on your navbar/footer height
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-section-padding) var(--space-container-padding);
+  background-color: var(--color-background);
+
+  &__container {
+    max-width: 800px;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: var(--heading-2);
+    color: var(--color-heading);
+    margin-bottom: var(--space-xl);
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: var(--heading-3);
+    }
+  }
+} 
